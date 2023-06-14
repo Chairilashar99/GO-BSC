@@ -6,7 +6,7 @@ type Address struct {
 	City, Province, Country string
 }
 
-// function pointer
+// function pointer.
 func ChangeCountryToIndonesia(address *Address) {
 	address.Country = "Indonesia"
 }
@@ -37,7 +37,7 @@ func main() {
 	address4.City = "Soppeng"
 	fmt.Println(address4)
 
-	//function pointer
+	//function pointer.
 	var alamat = Address{
 		City:     "Jakarta",
 		Province: "DKI Jakarta",
