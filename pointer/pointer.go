@@ -6,6 +6,11 @@ type Address struct {
 	City, Province, Country string
 }
 
+// function pointer
+func ChangeCountryToIndonesia(address *Address) {
+	address.Country = "Indonesia"
+}
+
 func main() {
 	address1 := Address{"Jakarta", "DKI Jakarta", "Indonesia"}
 	//Pass by Value maksdnya mengcopy data pertama tanpa harus mengubah datanya
@@ -31,4 +36,13 @@ func main() {
 	address4 := new(Address)
 	address4.City = "Soppeng"
 	fmt.Println(address4)
+
+	//function pointer
+	var alamat = Address{
+		City:     "Jakarta",
+		Province: "DKI Jakarta",
+		Country:  "",
+	}
+	ChangeCountryToIndonesia(&alamat)
+	fmt.Println(alamat)
 }
